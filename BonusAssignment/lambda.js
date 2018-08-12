@@ -15,5 +15,5 @@ console.log("This is for the Bonus Assignment", event);
 			}
 			
 		event.Result = result;
-	callback(null,'Successfully executed');
+	callback(null, event);
 }
