@@ -4,23 +4,11 @@ exports.handler = function(event, context, callback) {
 	let operation = event.Operation;
 	let result = null;
 	switch(operation) {
-		case "Add":
-			result = event.LeftParameter + event.RightParameter;
+		case "Code Executed Successfully":
+			result = "I got the Bonus :)";
 			break;
-		case "Subtract":
-			result = event.LeftParameter - event.RightParameter;
-			break;
-		case "Multiply":
-			result = event.LeftParameter + event.RightParameter;
-			break;
-		case "Devide":
-			result = event.LeftParameter / event.RightParameter;
-			break;
-		case "Mod":
-			result = event.LeftParameter % event.RightParameter;
-			break;
-		default:
-			result = "Operation Not Permitted";
+		case "Code Execution Failed":
+			result = "Better try harder! No Bonus ;)";
 			break;
 	}
 	event.Result = result;
